@@ -37,6 +37,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="7Gb-1E-5yV" id="RK8-8j-Vv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,15 +74,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-mF-Vyl">
                                 <rect key="frame" x="182.66666666666666" y="64" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordTapped:" destination="gEX-9l-a3H" eventType="touchUpInside" id="YT1-t5-PVh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-WB-Efv">
                                 <rect key="frame" x="192" y="114" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="gEX-9l-a3H" eventType="touchUpInside" id="KEs-Z6-t6B"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sound Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kl2-xz-Ap6">
                                 <rect key="frame" x="107" y="164" width="200" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="R5d-KH-SSi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8ce-OL-38G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -87,6 +96,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUI-6b-bK1">
                                 <rect key="frame" x="192" y="218" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="gEX-9l-a3H" eventType="touchUpInside" id="lhA-mz-a99"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EKj-Ca-OQ4"/>
@@ -104,7 +116,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="pTj-2f-fU4"/>
                     <connections>
+                        <outlet property="addButton" destination="mUI-6b-bK1" id="EeI-aA-zUQ"/>
                         <outlet property="nameTextField" destination="kl2-xz-Ap6" id="4pr-xT-LNb"/>
+                        <outlet property="playButton" destination="gFf-WB-Efv" id="ced-fY-a37"/>
                         <outlet property="recordButton" destination="L4U-mF-Vyl" id="YE2-Mg-NNk"/>
                     </connections>
                 </viewController>
